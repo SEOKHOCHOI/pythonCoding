@@ -49,3 +49,44 @@ while count < 5:
 
 # for: 정한 횟수만큼 반복할때 사용.
 # while: 어떤 조건이 만족하지 않을때까지 반복을 수행할때 자주 사용.
+
+
+# 예제
+# 프로그램 사용자로부터 자연수를 입력 받고, 0부터 자연수까지의 합계를 출력하세요.
+number = int(input("자연수를 입력하세요 >>>"))
+sum = 0  # 초기화
+for i in range(1, number + 1):
+    sum = sum + i
+
+print(sum)
+
+# 사용자로부터 -1을 입력 받으면 프로그램이 종료되는 프로그램을 작성해보세요.
+print("프로그램 시작")
+number = int(input("종료하려면 -1을 입력하세요:"))
+
+while number != -1:
+    number = int(input("종료하려면 -1을 입력하세요:"))
+print(number, "프로그램이 종료됩니다.")
+# 다른 방법
+# while True는 무한반복
+while True:
+    number = int(input("종료하려면 -1을 입력하세요:"))
+    if number == -1:
+        break  # 반복문 탈출될거야.
+print(number, "프로그램이 종료됩니다.")
+
+# 별 찍기
+for i in range(1, 6):  # 1,2,3,4,5 순서열
+    print("*" * i)
+
+# 위아래 반전 별
+for i in range(1, 6):
+    print("*" * (6-i))
+
+# 좌우 반전 별
+for i in range(1, 6):
+    print(" " * (5-i) + "*" * (i))
+
+# 좌우 반전 별 뒤집기
+for i in range(1, 6):
+    print(" " * (i-1) + "*" * (6-i))
