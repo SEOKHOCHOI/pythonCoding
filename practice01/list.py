@@ -37,3 +37,17 @@ print(animals)
 # 리스트 정렬에 옵션 reverse=True: 오름차순의 역순인 내림차순으로 정렬
 animals.sort(reverse=True)
 print(animals)
+
+# 중복 확인
+# in 이라는 연산자는
+# test_list라는 리스트에
+# 3이라는 데이터가 있는지 없는지 검사해줘.
+# 포함되면 Ture, 되지 안흥면 False
+test_list = [1, 2, 3, 4, 5]
+
+if 3 in test_list:
+    print("yes")
+
+# not은 반대로 만들어주는 연산자
+if 6 not in test_list:
+    print("yes")
