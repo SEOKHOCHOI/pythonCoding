@@ -73,3 +73,36 @@ for value in play_data.values():
 # 키와 벨류를 한 번에 가져올때 사용해.
 for key, value in play_data.items():
     print(key, value)
+
+
+# 다시말해 사전(Dictionary): 키(Key)와 값(Value) 한 쌍을 원소로 가지는 자료형 이다.
+dict = {}
+dict['안녕'] = 'Hello'
+dict['기적'] = 'Miracle'
+dict['노력'] = 'effort'
+dict['안녕'] = 'Hi'  # 변경
+del dict['기적']  # 삭제
+# 모든원속 삭제는 dict.clear()
+# 사전 자료형의 길이는 len(dict)
+for i, k in enumerate(dict):
+    print("[인덱스:", i, "] 한글:", k, "/ 영어:", dict[k])
+
+keys = dict.keys()  # 키 값만 출력
+key_list = list(keys)  # 리스트 처럼
+# 값만 꺼내서 리스트 처럼
+values = dict.values()
+value_list = list(values)
+# 특정한 key가 존재하는지 여부
+if '노력' in dict:
+    print("[노력] 키가 존재합니다.")
+
+
+# 기본적으로 순서랑 상관없이 사용하기 위해 쓰는 자료형 이지만
+# 정렬도 사용 할 수 있다.
+scores = {}
+scores['최석호'] = 100
+scores['나동빈'] = 99
+scores['유호익'] = 98
+print(sorted(scores))  # 사전순서에 맞게 키로 정렬이 돼.(오름차순)
+print(sorted(scores, reverse=True))  # 키로 내림차순 정렬
+print(sorted(scores.values()))  # 값을 정렬하기
